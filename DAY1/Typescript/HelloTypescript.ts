@@ -73,3 +73,43 @@ console.log(company);
 
 var Square = x => x * x;
 console.log(Square(10));
+
+// var cars = ["BMW", "AUDI", "MERC"];
+// cars.forEach(function (car) {
+//   console.log(car);
+// });
+// // OR
+
+// cars.forEach(car => console.log(car));
+
+// The Problem
+
+function Emp() {
+  this.salary = 200000;
+
+  setTimeout(() => {
+    console.log(this.salary);
+  }, 2000);
+}
+
+var e = new Emp();
+
+// Spread  Operator
+// With Arrays
+var cars: string[] = ["BMW", "AUDI", "MERC"];
+var moreCars: string[] = ["Maruti", "Honda"];
+
+var allCars: string[] = [...cars, ...moreCars];
+console.log(allCars);
+
+// with Object
+
+let person = { name: "Alcaraz", age: 21, sport: "Lawn Tennis" };
+let player = { ...person, sport: "Tennis" };
+console.log(player);
+// OR
+
+// var cars: Array<string> = new Array<string>();// Generics
+
+
+// Destructuring
