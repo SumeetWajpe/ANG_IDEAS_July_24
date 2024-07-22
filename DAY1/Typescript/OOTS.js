@@ -32,7 +32,8 @@ var Car = /** @class */ (function () {
         this.speed = speed;
     }
     Car.prototype.accelerate = function () {
-        return "The car " + this.name + " is running @ " + this.speed + " kmph !";
+        // return "The car " + this.name + " is running @ " + this.speed + " kmph !";
+        return "The car ".concat(this.name, " is running @ ").concat(this.speed, " kmph !");
     };
     return Car;
 }());
@@ -78,6 +79,8 @@ var Point = /** @class */ (function () {
     return Point;
 }());
 var pointToBeNoted = new Point();
-function Addition(x, y) {
-    return x + y;
-}
+// function Addition(x, y) {
+//   return x + y;
+// }
+var multiLineStr = "FIRST LINE\nSECOND LINE\nLAST LINE !";
+console.log(multiLineStr);

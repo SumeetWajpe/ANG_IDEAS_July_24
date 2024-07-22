@@ -27,7 +27,8 @@ class Car {
   }
 
   accelerate(): string {
-    return "The car " + this.name + " is running @ " + this.speed + " kmph !";
+    // return "The car " + this.name + " is running @ " + this.speed + " kmph !";
+    return `The car ${this.name} is running @ ${this.speed} kmph !`;
   }
 }
 
@@ -83,3 +84,8 @@ var pointToBeNoted = new Point<number>();
 // function Addition(x, y) {
 //   return x + y;
 // }
+
+var multiLineStr = `FIRST LINE
+SECOND LINE
+LAST LINE !`;
+console.log(multiLineStr);
