@@ -139,3 +139,5 @@ let {
   age,
   details: { sport },
 } = person;
+
+
