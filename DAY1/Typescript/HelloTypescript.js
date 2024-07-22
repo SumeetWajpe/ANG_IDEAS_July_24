@@ -64,14 +64,32 @@ function Emp() {
 var e = new Emp();
 // Spread  Operator
 // With Arrays
-var cars = ["BMW", "AUDI", "MERC"];
-var moreCars = ["Maruti", "Honda"];
-var allCars = [...cars, ...moreCars];
-console.log(allCars);
+// var cars: string[] = ["BMW", "AUDI", "MERC"];
+// var moreCars: string[] = ["Maruti", "Honda"];
+// var allCars: string[] = [...cars, ...moreCars];
+// console.log(allCars);
 // with Object
-let person = { name: "Alcaraz", age: 21, sport: "Lawn Tennis" };
-let player = Object.assign(Object.assign({}, person), { sport: "Tennis" });
-console.log(player);
+// let person = { name: "Alcaraz", age: 21, sport: "Lawn Tennis" };
+// let player = { ...person, sport: "Tennis" };
+// console.log(player);
 // OR
 // var cars: Array<string> = new Array<string>();// Generics
 // Destructuring
+// with Arrays
+var cars = ["BMW", "AUDI", "MERC"];
+// let firstCar, secondCar;
+// firstCar = cars[0];
+// secondCar = cars[1];
+// OR
+// let [firstCar, , , secondCar = "Unknown"] = cars;
+// with Objects
+let person = {
+    fname: "Carlos Alcaraz",
+    age: 21,
+    details: { sport: "Tennis", seedNo: 3 },
+};
+// let fname, age;
+// fname = person.fname;
+// age = fname.age;
+// OR
+let { fname: FULLNAME, age, details: { sport }, } = person;
