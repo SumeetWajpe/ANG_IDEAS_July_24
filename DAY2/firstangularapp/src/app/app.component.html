@@ -1,6 +1,9 @@
 <!-- <app-message msg="Hello" from="James" to="Bond"></app-message>
 <app-message msg="Hi" from="Peter" to="Parker"></app-message> -->
-
-<div *ngFor="let m of messages">
-  <app-message [messagedetails]="m"></app-message>
+<div class="row">
+  <app-message
+    *ngFor="let m of messages"
+    [messagedetails]="m"
+    class="col-md-4"
+  ></app-message>
 </div>

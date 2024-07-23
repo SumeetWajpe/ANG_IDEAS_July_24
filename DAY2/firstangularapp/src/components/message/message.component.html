@@ -1,5 +1,21 @@
-<img [src]="messagedetails.imageurl" alt="" height="200px" width="250px" />
+<!-- <img [src]="messagedetails.imageurl" alt="" height="200px" width="250px" />
 <h1>{{ messagedetails.msg }}</h1>
 <h2>From : {{ messagedetails.from }}</h2>
 <h2>To : {{ messagedetails.to }}</h2>
-<hr />
+<hr /> -->
+
+<div class="card">
+  <img
+    [src]="messagedetails.imageurl"
+    class="card-img-top"
+    alt=""
+    height="200px"
+    width="250px"
+  />
+
+  <div class="card-body">
+    <h5 class="card-title">{{ messagedetails.msg }}</h5>
+    <p class="card-text">From : {{ messagedetails.from }}</p>
+    <p class="card-text">To : {{ messagedetails.to }}</p>
+  </div>
+</div>
