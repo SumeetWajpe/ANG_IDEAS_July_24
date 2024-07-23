@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Message } from '../message/message.component';
+import { Message } from '../components/message/message.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
