@@ -6,10 +6,13 @@ import { ListofproductsComponent } from './components/listofproducts/listofprodu
 import { ProductComponent } from './components/product/product.component';
 import { IconComponent } from './components/atoms/icon/icon.component';
 import { RatingComponent } from './components/molecules/rating/rating.component';
+import { TwowaybindingComponent } from './components/twowaybinding/twowaybinding.component';
+import { FormsModule } from '@angular/forms';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
-  declarations: [AppComponent, ListofproductsComponent, ProductComponent, IconComponent, RatingComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent, ListofproductsComponent, ProductComponent, IconComponent, RatingComponent, TwowaybindingComponent, PostsComponent],
+  imports: [BrowserModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

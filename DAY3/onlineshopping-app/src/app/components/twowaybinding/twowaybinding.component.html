@@ -1,0 +1,7 @@
+<!-- <label
+  >Enter your name :
+  <input type="text" [value]="name" (input)="ChangeName($event)"
+/></label> -->
+
+<label>Enter your name : <input type="text" [(ngModel)]="name" /></label>
+<p>{{ name }}</p>

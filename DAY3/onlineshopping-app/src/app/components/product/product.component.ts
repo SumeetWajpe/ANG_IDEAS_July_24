@@ -7,6 +7,7 @@ import { ProductModel } from 'src/app/models/product.model';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
+  isAddedToCart: boolean = false;
   @Input() productdetails: ProductModel = new ProductModel(
     '0',
     '',
@@ -16,4 +17,9 @@ export class ProductComponent {
     '',
     ''
   );
+
+  ChangeLikes() {
+    // mutate
+    this.productdetails.likes++;
+  }
 }
