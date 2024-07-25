@@ -3,48 +3,58 @@ import { ProductModel } from "../models/product.model";
 export class ProductService {
   listofproducts: ProductModel[] = [
     {
-      id: '2',
-      title: 'OLED TV',
-      price: 25000,
-      rating: 3,
-      imageUrl:
-        'https://www.lg.com/content/dam/channel/wcms/in/images/tvs/oled65a3psa_atr_eail_in_c/gallery/TV-OLED-65-A3-A-Gallery-01.jpg/_jcr_content/renditions/thum-1600x1062.jpeg',
-      likes: 500,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    {
-      id: '3',
-      title: 'Desktop',
-      price: 10000,
-      rating: 3,
-      imageUrl:
-        'https://images-eu.ssl-images-amazon.com/images/I/41IjXCFmiRL._SL500_AC_SS350_.jpg',
-      likes: 200,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    {
-      id: '4',
-      title: 'Mobile',
-      price: 20000,
+      id: 1,
+      title: 'Laptop',
+      price: 100000,
       rating: 5,
+      likes: 300,
       imageUrl:
-        'https://5.imimg.com/data5/SELLER/Default/2022/3/BK/TA/UG/148618475/vivo-y19-mobile-phones.jpg',
-      likes: 400,
+        'https://media.wired.com/photos/64daad6b4a854832b16fd3bc/16:9/w_2400,h_1350,c_limit/How-to-Choose-a-Laptop-August-2023-Gear.jpg',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      id: '5',
-      title: 'Q-OLED TV',
-      price: 25000,
-      rating: 3,
-      imageUrl:
-        'https://www.lg.com/content/dam/channel/wcms/in/images/tvs/oled65a3psa_atr_eail_in_c/gallery/TV-OLED-65-A3-A-Gallery-01.jpg/_jcr_content/renditions/thum-1600x1062.jpeg',
+      id: 2,
+      title: 'OLED TV',
+      price: 80000,
+      rating: 4,
       likes: 500,
+      imageUrl:
+        'https://cdn.thewirecutter.com/wp-content/media/2023/08/oledtv-2048px-2002-3x2-1.jpg',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
+    {
+      id: 3,
+      title: 'LED TV',
+      price: 50000,
+      rating: 5,
+      likes: 300,
+      imageUrl:
+        'https://www.cnet.com/a/img/resize/b4c8af21865f37260b816ba2c7bd4680f8b66b53/hub/2022/03/31/3a8d6e23-59d3-46eb-9d3d-a05d68bb3dc7/s95b-lifestyle-02.jpg?auto=webp&fit=crop&height=675&width=1200',
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
+    {
+      id: 4,
+      title: 'QLED TV',
+      price: 100000,
+      rating: 3,
+      likes: 200,
+      imageUrl:
+        'https://www.lg.com/content/dam/channel/wcms/in/images/tvs/oled42c2psa_atr_eail_in_c/gallery/OLED42C2PSA-D-01-V.jpg',
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
+    {
+      id: 5,
+      title: 'Camera',
+      price: 100000,
+      rating: 5,
+      likes: 100,
+      imageUrl: 'https://cdn.mos.cms.futurecdn.net/Ekc54rx2YMgRt5ycD5KYf5.jpg',
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     },
   ];
 }

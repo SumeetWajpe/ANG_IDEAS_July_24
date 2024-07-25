@@ -9,10 +9,19 @@ import { RatingComponent } from './components/molecules/rating/rating.component'
 import { TwowaybindingComponent } from './components/twowaybinding/twowaybinding.component';
 import { FormsModule } from '@angular/forms';
 import { PostsComponent } from './components/posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, ListofproductsComponent, ProductComponent, IconComponent, RatingComponent, TwowaybindingComponent, PostsComponent],
-  imports: [BrowserModule,FormsModule],
+  declarations: [
+    AppComponent,
+    ListofproductsComponent,
+    ProductComponent,
+    IconComponent,
+    RatingComponent,
+    TwowaybindingComponent,
+    PostsComponent,
+  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

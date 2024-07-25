@@ -9,6 +9,7 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostsComponent {
   constructor(public postSrvObj: PostsService) {
-    console.log(this.postSrvObj.posts.length);
+    // console.log(this.postSrvObj.posts.length);
+    this.postSrvObj.getAllPosts();
   }
 }
