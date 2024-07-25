@@ -7,12 +7,12 @@ import { HttpClient } from "@angular/common/http";
 export class PostsService {
   posts: PostModel[] = [];
   constructor(public httpCLientObj: HttpClient) {}
-  getAllPosts() {
+  getAllPosts(): Promise<PostModel[]> {
     return new Promise((resolve, reject) => {
       // make AJAX request here !
       this.httpCLientObj
-        .get("https://jsonplaceholder.typicode.com/posts")
-        .subscribe((posts: any) => resolve(posts));
+        .get<PostModel[]>("https://jsonplaceholder.typicode.com/posts")
+        .subscribe((posts: PostModel[]) => resolve(posts));
     });
   }
 }

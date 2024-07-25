@@ -10,17 +10,22 @@ import { PostsService } from "src/app/services/posts.service";
 })
 export class PostsComponent implements OnInit {
   posts: PostModel[] = [];
-  constructor(public postSrvObj: PostsService) {
-    
-  }
+  constructor(public postSrvObj: PostsService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     // console.log(this.postSrvObj.posts.length);
     // using Subscribe (Observables)
     // const response = this.postSrvObj.getAllPosts();
     // response.subscribe((posts: any) => (this.posts = posts));
     // using Promise
-    const aPromise = this.postSrvObj.getAllPosts();
-    aPromise.then((posts: any) => (this.posts = posts));
+    // const aPromise = this.postSrvObj.getAllPosts();
+    // aPromise.then((posts: any) => (this.posts = posts));
+
+    try {
+      // using promises with async await
+      this.posts = await this.postSrvObj.getAllPosts();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
