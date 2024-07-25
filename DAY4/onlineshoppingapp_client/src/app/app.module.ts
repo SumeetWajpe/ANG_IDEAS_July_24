@@ -10,6 +10,7 @@ import { TwowaybindingComponent } from "./components/twowaybinding/twowaybinding
 import { FormsModule } from "@angular/forms";
 import { PostsComponent } from "./components/posts/posts.component";
 import { HttpClientModule } from "@angular/common/http";
+import { AppRoutingModule } from "./routing.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
     TwowaybindingComponent,
     PostsComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule,AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
