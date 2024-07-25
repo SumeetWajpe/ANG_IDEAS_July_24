@@ -11,6 +11,7 @@ import { FormsModule } from "@angular/forms";
 import { PostsComponent } from "./components/posts/posts.component";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./routing.module";
+import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppRoutingModule } from "./routing.module";
     RatingComponent,
     TwowaybindingComponent,
     PostsComponent,
+    NavBarComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule,AppRoutingModule],
   providers: [],
