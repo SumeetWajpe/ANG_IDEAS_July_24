@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { PostModel } from "src/app/models/posts.model";
 import { PostsService } from "src/app/services/posts.service";
 
@@ -8,11 +8,19 @@ import { PostsService } from "src/app/services/posts.service";
   styleUrls: ["./posts.component.css"],
   providers: [PostsService],
 })
-export class PostsComponent {
+export class PostsComponent implements OnInit {
   posts: PostModel[] = [];
   constructor(public postSrvObj: PostsService) {
+    
+  }
+
+  ngOnInit() {
     // console.log(this.postSrvObj.posts.length);
-    const response = this.postSrvObj.getAllPosts();
-    response.subscribe((posts: any) => (this.posts = posts));
+    // using Subscribe (Observables)
+    // const response = this.postSrvObj.getAllPosts();
+    // response.subscribe((posts: any) => (this.posts = posts));
+    // using Promise
+    const aPromise = this.postSrvObj.getAllPosts();
+    aPromise.then((posts: any) => (this.posts = posts));
   }
 }
