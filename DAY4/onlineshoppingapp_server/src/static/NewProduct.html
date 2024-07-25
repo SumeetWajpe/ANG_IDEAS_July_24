@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script>
+      async function AddNewProduct(e) {
+        e = event || e;
+        e.preventDefault();
+        let id = document.getElementById("txtProductId").value;
+        let title = document.getElementById("txtProductTitle").value;
+        let price = document.getElementById("txtProductPrice").value;
+        let rating = document.getElementById("txtProductRating").value;
+        let likes = document.getElementById("txtProductLikes").value;
+        let imageUrl = document.getElementById("txtProductImageUrl").value;
+        let newProduct = { id, title, price, rating, likes, imageUrl };
+
+        let res = await fetch("http://localhost:3000/products/new", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newProduct),
+        });
+
+        let msg = await res.json();
+        alert(msg.msg);
+        window.location.href = "/";
+      }
+    </script>
+  </head>
+  <body class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Online Shopping</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="NewProduct.html">New Product</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <form onsubmit="AddNewProduct()">
+        <div class="col-md-4">
+          <div class="row">
+            <label for="txtProductId">Id :</label>
+            <input type="number" id="txtProductId" />
+          </div>
+          <div class="row">
+            <label for="txtProductTitle">Title :</label>
+            <input type="text" id="txtProductTitle" />
+          </div>
+          <div class="row">
+            <label for="txtProductPrice">Price :</label>
+            <input type="number" id="txtProductPrice" />
+          </div>
+          <div class="row">
+            <label for="txtProductRating">Rating :</label>
+            <input type="number" id="txtProductRating" />
+          </div>
+          <div class="row">
+            <label for="txtProductLikes">Likes :</label>
+            <input type="number" id="txtProductLikes" />
+          </div>
+          <div class="row">
+            <label for="txtProductImageUrl">Image Url :</label>
+            <input type="text" id="txtProductImageUrl" />
+          </div>
+        </div>
+        <button class="btn btn-success">Add New Product</button>
+      </form>
+    </main>
+  </body>
+</html>

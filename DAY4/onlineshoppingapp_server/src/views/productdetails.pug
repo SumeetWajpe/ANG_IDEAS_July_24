@@ -1,0 +1,11 @@
+extends layout 
+block content
+        div(class="row")
+            div(class="col-md-9")
+                //- img(src=theProduct.imageUrl width="100%")
+                video(src="/products/product/video" controls width="100%")
+            div(class="col-md-3")
+                h2= theProduct.title
+                p ₹. #{theProduct.price}
+                button(class="btn btn-primary")= theProduct.likes
+                p= theProduct.description
