@@ -13,6 +13,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./routing.module";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { PostDetails } from "./components/postdetails/postdetails.component";
+import { ProductService } from "./services/products.service";
+import { ProductDetails } from "./components/product-details/product-details.component";
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { PostDetails } from "./components/postdetails/postdetails.component";
     PostsComponent,
     NavBarComponent,
     PostDetails,
+    ProductDetails,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

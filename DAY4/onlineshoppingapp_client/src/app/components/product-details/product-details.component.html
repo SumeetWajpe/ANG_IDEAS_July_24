@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-9">
+    <img [src]="theProduct.imageUrl" [alt]="theProduct.title" width="100%" />
+  </div>
+  <div class="col-md-3">
+    <h5 class="card-title">{{ theProduct.title }}</h5>
+    <p class="card-text">
+      <app-rating [rating]="theProduct.rating"></app-rating>
+    </p>
+    <p class="card-text">{{ theProduct.price }}</p>
+    <button class="btn btn-primary">
+      {{ theProduct.likes }}
+      <i class="fa-solid fa-thumbs-up"></i>
+    </button>
+
+    <p>
+      {{ theProduct.description }}
+    </p>
+  </div>
+</div>

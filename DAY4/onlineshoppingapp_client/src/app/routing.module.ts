@@ -3,11 +3,16 @@ import { ListofproductsComponent } from "./components/listofproducts/listofprodu
 import { PostsComponent } from "./components/posts/posts.component";
 import { RouterModule, Routes } from "@angular/router";
 import { PostDetails } from "./components/postdetails/postdetails.component";
+import { ProductDetails } from "./components/product-details/product-details.component";
 
 const routes: Routes = [
   {
     path: "",
     component: ListofproductsComponent,
+  },
+  {
+    path: "productdetails/:id",
+    component: ProductDetails,
   },
   {
     path: "posts",
