@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { ProductModel } from "src/app/models/product.model";
+import { CartService } from "src/app/services/cartservice";
 
 @Component({
   selector: "app-product",
@@ -18,8 +19,16 @@ export class ProductComponent {
     "",
   );
 
+  constructor(public cartSrvObject: CartService) {}
+
   ChangeLikes() {
     // mutate
     this.productdetails.likes++;
+  }
+
+  HandleChange(e: any) {
+    if (e.target.checked) {
+      this.cartSrvObject.addItemToCart(this.productdetails);
+    }
   }
 }

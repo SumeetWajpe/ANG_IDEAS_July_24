@@ -16,7 +16,11 @@
     </p>
     <p class="card-text">{{ productdetails.price }}</p>
     <p class="card-text">
-      <input type="checkbox" [(ngModel)]="isAddedToCart" />
+      <input
+        type="checkbox"
+        [(ngModel)]="isAddedToCart"
+        (change)="HandleChange($event)"
+      />
       Add to Cart
     </p>
     <button class="btn btn-primary" (click)="ChangeLikes()">

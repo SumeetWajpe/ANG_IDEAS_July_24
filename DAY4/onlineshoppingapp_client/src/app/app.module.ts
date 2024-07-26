@@ -15,6 +15,8 @@ import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { PostDetails } from "./components/postdetails/postdetails.component";
 import { ProductService } from "./services/products.service";
 import { ProductDetails } from "./components/product-details/product-details.component";
+import { CartCountComponent } from "./components/cart/cartcount/cartcount.component";
+import { CartService } from "./services/cartservice";
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { ProductDetails } from "./components/product-details/product-details.com
     NavBarComponent,
     PostDetails,
     ProductDetails,
+    CartCountComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
-  providers: [ProductService],
+  providers: [ProductService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
