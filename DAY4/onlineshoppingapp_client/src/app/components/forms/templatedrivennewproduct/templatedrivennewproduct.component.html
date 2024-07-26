@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center align-items mt-3">
-  <form (ngSubmit)="HandleFormSubmit()">
+  <form #f="ngForm" ngNativeValidate (ngSubmit)="HandleFormSubmit(f)">
     <p>
       <label class="form-label">
         Id :
@@ -7,9 +7,13 @@
           type="number"
           class="form-control"
           [(ngModel)]="newProduct.id"
+          required
           name="pid"
         />
       </label>
+    </p>
+    <p style="color: red" *ngIf="producttitle.invalid && producttitle.dirty">
+      The productname is required
     </p>
     <p>
       <label class="form-label">
@@ -19,6 +23,8 @@
           class="form-control"
           name="ptitle"
           [(ngModel)]="newProduct.title"
+          required
+          #producttitle="ngModel"
         />
       </label>
     </p>

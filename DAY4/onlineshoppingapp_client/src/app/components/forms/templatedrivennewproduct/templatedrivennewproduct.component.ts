@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 import { ProductModel } from "src/app/models/product.model";
 
 @Component({
@@ -9,7 +10,12 @@ import { ProductModel } from "src/app/models/product.model";
 export class TemplatedrivennewproductComponent {
   newProduct: ProductModel = new ProductModel();
 
-  HandleFormSubmit() {
+  constructor(public router: Router) {}
+
+  HandleFormSubmit(f: any) {
     console.log(this.newProduct);
+    // add new product to the collection from service
+    // this.router.navigate(["/"]);
+    f.reset();
   }
 }
