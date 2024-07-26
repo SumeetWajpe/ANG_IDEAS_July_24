@@ -4,6 +4,8 @@ import { PostsComponent } from "./components/posts/posts.component";
 import { RouterModule, Routes } from "@angular/router";
 import { PostDetails } from "./components/postdetails/postdetails.component";
 import { ProductDetails } from "./components/product-details/product-details.component";
+import { CartitemsComponent } from "./components/cart/cartitems/cartitems.component";
+import { TemplatedrivennewproductComponent } from "./components/forms/templatedrivennewproduct/templatedrivennewproduct.component";
 
 const routes: Routes = [
   {
@@ -13,6 +15,14 @@ const routes: Routes = [
   {
     path: "productdetails/:id",
     component: ProductDetails,
+  },
+  {
+    path: "newproduct",
+    component: TemplatedrivennewproductComponent,
+  },
+  {
+    path: "cart",
+    component: CartitemsComponent,
   },
   {
     path: "posts",

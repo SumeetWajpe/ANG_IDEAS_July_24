@@ -1,0 +1,87 @@
+<div class="d-flex justify-content-center align-items mt-3">
+  <form (ngSubmit)="HandleFormSubmit()">
+    <p>
+      <label class="form-label">
+        Id :
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="newProduct.id"
+          name="pid"
+        />
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Title :
+        <input
+          type="text"
+          class="form-control"
+          name="ptitle"
+          [(ngModel)]="newProduct.title"
+        />
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Price :
+        <input
+          type="number"
+          class="form-control"
+          name="pprice"
+          [(ngModel)]="newProduct.price"
+        />
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Rating :
+        <input
+          type="number"
+          min="1"
+          max="5"
+          class="form-control"
+          name="prating"
+          [(ngModel)]="newProduct.rating"
+        />
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Likes :
+        <input
+          type="number"
+          class="form-control"
+          name="plikes"
+          [(ngModel)]="newProduct.likes"
+        />
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Image Url :
+        <input
+          type="text"
+          class="form-control"
+          name="pimageurl"
+          [(ngModel)]="newProduct.imageUrl"
+        />
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Description :
+        <textarea
+          cols="20"
+          rows="5"
+          class="form-control"
+          name="pdescription"
+          [(ngModel)]="newProduct.description"
+        ></textarea>
+      </label>
+    </p>
+    <p>
+      <button class="btn btn-success">Add New Product</button>
+    </p>
+  </form>
+</div>
