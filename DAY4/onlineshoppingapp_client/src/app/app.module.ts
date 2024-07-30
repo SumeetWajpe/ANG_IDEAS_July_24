@@ -20,6 +20,7 @@ import { CartService } from "./services/cartservice";
 import { CartitemsComponent } from "./components/cart/cartitems/cartitems.component";
 import { TemplatedrivennewproductComponent } from "./components/forms/templatedrivennewproduct/templatedrivennewproduct.component";
 import { ModeldrivennewproductComponent } from "./components/forms/modeldrivennewproduct/modeldrivennewproduct.component";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ModeldrivennewproductComponent } from "./components/forms/modeldrivenne
     CartitemsComponent,
     TemplatedrivennewproductComponent,
     ModeldrivennewproductComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

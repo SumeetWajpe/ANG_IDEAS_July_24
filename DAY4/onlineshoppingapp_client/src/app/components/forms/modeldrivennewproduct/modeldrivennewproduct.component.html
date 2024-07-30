@@ -13,10 +13,17 @@
     style="color: red"
     *ngIf="
       newProductForm.controls['title'].invalid &&
-      newProductForm.controls['title'].dirty
+      (newProductForm.controls['title'].dirty &&
+        newProductForm.controls['title'].value == '')
     "
   >
     The product title is required !
+  </p>
+  <p
+    style="color: red"
+    *ngIf="newProductForm.controls['title'].hasError('restrictedName')"
+  >
+    The product title cannot be Angular !
   </p>
   <p>
     <label class="form-label">

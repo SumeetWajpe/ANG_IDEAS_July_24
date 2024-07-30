@@ -28,5 +28,6 @@ export class ModeldrivennewproductComponent {
     // console.log(this.newProductForm.controls['title'].dirty );
     // this.newProductForm.controls["title"].value = "XYZ";
     console.log(this.newProductForm.value);
+    
   }
 }
