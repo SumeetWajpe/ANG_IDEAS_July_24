@@ -3,10 +3,71 @@
   [formGroup]="newProductForm"
   (ngSubmit)="AddNewProduct()"
 >
-  Title :
-  <input type="text" formControlName="title" />
-
-  <button class="btn btn-success" [disabled]="newProductForm.invalid">
-    Add New Product
-  </button>
+  <p>
+    <label class="form-label">
+      Id :
+      <input type="number" class="form-control" formControlName="id" />
+    </label>
+  </p>
+  <p
+    style="color: red"
+    *ngIf="
+      newProductForm.controls['title'].invalid &&
+      newProductForm.controls['title'].dirty
+    "
+  >
+    The product title is required !
+  </p>
+  <p>
+    <label class="form-label">
+      Title :
+      <input type="text" class="form-control" formControlName="title" />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Price :
+      <input type="number" class="form-control" formControlName="price" />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Rating :
+      <input
+        type="number"
+        min="1"
+        max="5"
+        class="form-control"
+        formControlName="rating"
+      />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Likes :
+      <input type="number" class="form-control" formControlName="likes" />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Image Url :
+      <input type="text" class="form-control" formControlName="imageUrl" />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Description :
+      <textarea
+        cols="20"
+        rows="5"
+        class="form-control"
+        formControlName="description"
+      ></textarea>
+    </label>
+  </p>
+  <p>
+    <button class="btn btn-success" [disabled]="newProductForm.invalid">
+      Add New Product
+    </button>
+  </p>
 </form>
