@@ -7,7 +7,7 @@ import { ProductComponent } from "./components/product/product.component";
 import { IconComponent } from "./components/atoms/icon/icon.component";
 import { RatingComponent } from "./components/molecules/rating/rating.component";
 import { TwowaybindingComponent } from "./components/twowaybinding/twowaybinding.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PostsComponent } from "./components/posts/posts.component";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./routing.module";
@@ -17,8 +17,9 @@ import { ProductService } from "./services/products.service";
 import { ProductDetails } from "./components/product-details/product-details.component";
 import { CartCountComponent } from "./components/cart/cartcount/cartcount.component";
 import { CartService } from "./services/cartservice";
-import { CartitemsComponent } from './components/cart/cartitems/cartitems.component';
-import { TemplatedrivennewproductComponent } from './components/forms/templatedrivennewproduct/templatedrivennewproduct.component';
+import { CartitemsComponent } from "./components/cart/cartitems/cartitems.component";
+import { TemplatedrivennewproductComponent } from "./components/forms/templatedrivennewproduct/templatedrivennewproduct.component";
+import { ModeldrivennewproductComponent } from "./components/forms/modeldrivennewproduct/modeldrivennewproduct.component";
 
 @NgModule({
   declarations: [
@@ -35,8 +36,15 @@ import { TemplatedrivennewproductComponent } from './components/forms/templatedr
     CartCountComponent,
     CartitemsComponent,
     TemplatedrivennewproductComponent,
+    ModeldrivennewproductComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
   providers: [ProductService, CartService],
   bootstrap: [AppComponent],
 })

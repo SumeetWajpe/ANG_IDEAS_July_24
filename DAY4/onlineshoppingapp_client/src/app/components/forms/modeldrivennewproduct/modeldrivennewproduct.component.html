@@ -1,0 +1,12 @@
+<form
+  ngNativeValidate
+  [formGroup]="newProductForm"
+  (ngSubmit)="AddNewProduct()"
+>
+  Title :
+  <input type="text" formControlName="title" />
+
+  <button class="btn btn-success" [disabled]="newProductForm.invalid">
+    Add New Product
+  </button>
+</form>
