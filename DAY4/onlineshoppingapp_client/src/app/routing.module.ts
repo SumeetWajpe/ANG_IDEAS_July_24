@@ -45,8 +45,29 @@ const routes: Routes = [
         path: "",
         component: ListofproductsComponent,
       },
+      {
+        path: "productdetails/:id",
+        component: ProductDetails,
+      },
+      {
+        path: "newproduct",
+        component: ModeldrivennewproductComponent,
+      },
+      {
+        path: "cart",
+        component: CartitemsComponent,
+      },
+      {
+        path: "posts",
+        component: PostsComponent,
+      },
+      {
+        path: "postdetails/:id",
+        component: PostDetails,
+      },
     ],
   },
+  { path: "**", redirectTo: "/dashboard" },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
